@@ -80,7 +80,8 @@ namespace Typograph
         /// <param name="text">Текст, который будет отформотирован по правилу, описанном выше.</param>
         public static string FirstOwnRule(string text)
         {
-            if (!text.EndsWith("."))
+            Regex regex = new Regex(@".*[.,?!…:;]");
+            if (!regex.IsMatch(text))
             {
                 text += ".";
             }

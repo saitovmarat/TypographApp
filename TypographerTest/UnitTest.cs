@@ -38,9 +38,13 @@ namespace TypographTest
         [TestMethod]
         public void FirstOwnRuleTest()
         {
-            string testResult = Rules.FirstOwnRule("Я люблю делать историю");
-            string rightResult = "Я люблю делать историю.";
-            Assert.AreEqual(rightResult, testResult);
+            string testResult1 = Rules.FirstOwnRule("Я люблю делать историю?");
+            string rightResult1 = "Я люблю делать историю?";
+            Assert.AreEqual(rightResult1, testResult1);
+            
+            string testResult2 = Rules.FirstOwnRule("Я люблю делать историю");
+            string rightResult2 = "Я люблю делать историю.";
+            Assert.AreEqual(rightResult2, testResult2);
         }
         [TestMethod]
         public void SecondOwnRuleTest()
